@@ -1,0 +1,3 @@
+[submodule "flutter-temp"]
+	path = flutter-temp
+	url = git@github.com:sanchit016/flutter-temp.git
