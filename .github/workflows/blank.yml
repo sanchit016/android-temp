@@ -37,6 +37,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.GH_TOKEN }}
-          event-type: CI
+          event-type: Flutter Release Tag Generation
           repository: sanchit016/flutter-temp
           client-payload: '{"flutter_branch": "${{ github.event.inputs.flutter-branch }}"}'
