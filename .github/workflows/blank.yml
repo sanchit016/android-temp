@@ -39,3 +39,4 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
           event-type: CI
+          repository: sanchit016/flutter-temp
