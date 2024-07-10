@@ -11,6 +11,11 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      flutter-branch:
+        description: 'Branch name of the Flutter repository'
+        required: true
+        default: 'develop'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -40,3 +45,4 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           event-type: CI
           repository: sanchit016/flutter-temp
+          client-payload: '{"flutter_branch": "${{ github.event.inputs.flutter-branch }}"}'
